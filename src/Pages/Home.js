@@ -9,6 +9,9 @@ export default class extends React.Component{
     return(
       <div>
         <Nav/>
+        <p>
+          Welcome to Reactify your forms! Use the left menu icon to navigate!
+        </p>
         <Routes/>
       </div>
     )
