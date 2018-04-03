@@ -15,13 +15,13 @@ export default class extends React.Component {
           <form onSubmit={(e) => {e.preventDefault(); console.log('username: '+this.state.resetUsername +" email: "+this.state.resetEmail)}}>
             Username <TextField required='required'
                                 label='username'
-                                id='resetusername'
+                                id='resetUsername'
                                 onChange={(e) => this.setState(({ resetUsername: e.target.value }))}
                                 value={this.state.resetUsername}/>
             <br/>
             Email <TextField required='required'
                              label='email'
-                             id='resetpassword'
+                             id='resetEmail'
                              onChange={(e) => this.setState(({ resetEmail: e.target.value }))}
                              value={this.state.resetEmail}/>
             <br/>

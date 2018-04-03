@@ -1,14 +1,15 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar'
 
-import Drawer from './Drawer'
+import CustomDrawer from './CustomDrawer'
 
 export default class extends React.Component{
- constructor(props) {
-   super(props)
-   this.state = { open: false };
- }
-toggleOpen = () => this.setState({ open: !this.state.open });
+  state = {
+    open: false
+  }
+  
+ toggleOpen = () => this.setState({ open: !this.state.open})
+
 
   render()
   {
@@ -16,8 +17,8 @@ toggleOpen = () => this.setState({ open: !this.state.open });
       <div>
 
       <AppBar title="Reactify Your Forms"
-              onLeftButtonClick={this.toggleOpen}/>
-        <Drawer open={this.state.open}
+              onLeftIconButtonClick={this.toggleOpen}/>
+        <CustomDrawer open={this.state.open}
                 change={this.toggleOpen}/>
       </div>
     )
